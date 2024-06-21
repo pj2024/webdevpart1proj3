@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root{
+    --white-bg:#F5F8FD;
+    --black-text:#030503;
+    --orange: #DDA71D;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+    font-family: "Poppins", sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color:var(--black-text);
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5vw;
+}
+
+nav{
+    padding: 2vw 5vw;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.nav1 h3{
+    font-size: 1.5vw;
+    font-weight: 400;
+}
+
+.nav2{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 25%;
+}
+.smline{
+    display: inline-block;
+    width: 2vw;
+    height: 2px;
+    background-color: var(--black-text);
+    position: absolute;
+    top: 20%;
+    left: 0%;
+    border-radius: 50px;
+}
+
+nav ul li{
+    position: relative;
+    cursor: pointer;
+}
+
+nav ul li::after{
+    content: "";
+    position: absolute;
+    width: 30%;
+    height: 3px;
+    background-color: var(--orange);
+    border-radius: 50px;
+    top: 0%;
+    right: 5%;
+    transform: scale(0);
+    transition: all .4s ease-in-out;
+}
+
+nav ul li:hover::after{
+    transform: scale(1);
+}
+
+
+
+
+.herocon{
+    width: 100%;
+    height: 100vh;
+    padding: 4vw 5vw;
+}
+
+.herocon p{
+    font-size: 1.6vw;
+    font-weight: 500;
+}
+
+.herocon h2{
+    font-size: 9vw;
+    font-weight: 500;
+    line-height: 9vw;
+    word-spacing: .5vw;
+    letter-spacing: -.7vw;
+}
+
+
+
+
+
+.casestudies{
+    width: 100%;
+    height: 100vh;
+    padding: 0 5vw;
+    display: flex;
+    flex-direction: column;
+    gap: 3vw;
+}
+
+.line{
+    display: inline-block;
+    width: 10vw;
+    height: 2px;
+    border-radius: 50px;
+    background-color: var(--black-text);
+}
+
+.case-study-headline{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    opacity: .7;
+}
+
+.case-study-headline p:nth-child(1){
+    font-weight: 700;
+}
+
+.case-study-headline p:nth-child(2){
+   width: 15%;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+.casecardcon{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5vw;
+}
+
+.card{
+    width: 50%;
+   
+}
+
+.img-con{
+    height: 90%;
+    width: 100%;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.img-con img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 0% 60%;
+    border-radius: 25px;
+}
+
+.bottomcon{
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.btn{
+    border: none;
+    outline: none;
+    background-color: var(--white-bg);
+    border: 2px solid var(--black-text);
+    border-radius: 50px;
+    font-size: 1.8vw;
+    padding: 1vw 2vw;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.btn:hover{
+    background-color: var(--black-text);
+    color: var(--white-bg);
+}
+
+.text-con h4{
+    font-size: 1.5vw;
+    font-weight: 600;
+}
+
+.text-con p{
+    font-size: 1vw;
+    font-weight: 400;
+    opacity: .7;
+}
+
+#menuicon{
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 440px) {
+    
+
+    #menuicon{
+        display: block;
+    }
+    
+    #menuicon span i{
+        font-size: 7vw;
+        cursor: pointer;
+    }
+
+    .nav1 h3{
+        font-size: 7vw;
+        position: relative;
+    }
+
+    .nav1 h3::after{
+        content: "";
+        position: absolute;
+        width: 40%;
+        height: 2px;
+        background-color: var(--orange);
+        bottom: 5%;
+        right: 5%;
+    }
+
+    .nav2, ul{
+        display: none;
+    }
+
+    .herocon{
+        width: 100%;
+        height: 40vh;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .herocon p{
+        font-size: 6vw;
+        font-weight: 500;
+    }
+    
+    .herocon h2{
+        font-size: 9vw;
+        font-weight: 500;
+    }
+
+    .case-study-headline p{
+        font-size: 3.5vw;
+    }
+    .case-study-headline p .line{
+        width: 20vw;
+    }
+    .case-study-headline p:nth-child(2){
+        gap: 3vw;
+    }
+    .casecardcon{
+        display: block;
+        min-height: 100vh;
+    }
+    .card{
+        width: 100%;
+        height: 80vh;
+        margin-top: 20px;
+    }
+
+    .btn{
+        font-size: 5vw;
+        padding: 3vw 6vw;
+    }
+    .card:nth-child(2){
+        margin-top: 40px;
+    }
+
+    .bottomcon{
+        height: 20vw;
+    }
+
+    .text-con h4{
+        font-size: 6vw;
+    }
+
+    .text-con p{
+        font-size: 3vw;
+    }
+}
